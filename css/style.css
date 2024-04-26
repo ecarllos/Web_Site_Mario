@@ -73,6 +73,10 @@ header img {
 
 }
 
+.M_logo {
+    width: 110px;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -98,7 +102,14 @@ header img {
     width: 60%;
     height: 1px;
     background-color: var(--red);
-    transform: scaleX();
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+
+.navigation_link:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .navigation_social {
@@ -119,4 +130,49 @@ header img {
 .navigation_social svg:hover {
     opacity: 1;
     transform: translateY(-5px);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.main_info {
+    width: 100%;
+    max-width: 570px;
+}
+
+.main_info p {
+    font-size: 18px;
+    margin: 20px 0 28px;
+}
+
+.main_info div {
+    display: flex;
+    column-gap: 32px;
+}
+
+.main_info div button, .main_info div a{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    transform: skew(-10deg);
+}
+
+.main_info div a {
+    background: var(--red);
+}
+
+.main_info div button {
+    background: transparent;
+    border: 1px solid var(--green);
 }
