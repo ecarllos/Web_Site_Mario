@@ -78,6 +78,7 @@ header img {
 }
 
 .navigation {
+    list-style: none;
     display: flex;
     align-items: center;
     column-gap: 48px;
